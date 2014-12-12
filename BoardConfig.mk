@@ -148,14 +148,3 @@ BOARD_HAS_NO_SELECT_BUTTON := true
 EXTENDED_FONT_FOOTPRINT := true
 
 MALLOC_IMPL := dlmalloc
-
-# Enable dex-preoptimization to speed up first boot sequence
-ifeq ($(HOST_OS),linux)
-  ifeq ($(TARGET_BUILD_VARIANT),user)
-    ifeq ($(WITH_DEXPREOPT),)
-      WITH_DEXPREOPT := true
-      WITH_DEXPREOPT_BOOT_IMG_ONLY := false
-    endif
-  endif
-endif
-WITH_DEXPREOPT_BOOT_IMG_ONLY ?= true
