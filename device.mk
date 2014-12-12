@@ -145,7 +145,12 @@ PRODUCT_PACKAGES += \
 
 # Qcom SoftAP & wifi
 PRODUCT_PACKAGES += \
-    libQWiFiSoftApCfg
+    dhcpcd.conf \
+    hostapd \
+    libQWiFiSoftApCfg \
+    wpa_supplicant \
+    wpa_supplicant.conf
+
 
 # Motorola
 PRODUCT_PACKAGES += \
